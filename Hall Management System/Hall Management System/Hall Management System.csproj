@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1CC6429A-A2E9-4523-85DE-E3E41D71E564}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hall_Management_System</RootNamespace>
+    <AssemblyName>Hall Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="itextsharp">
+      <HintPath>Resources\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.5.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Touchless.Vision">
+      <HintPath>WebCamera\Touchless.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="WebCamLib">
+      <HintPath>WebCamera\WebCamLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\attendance_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\attendance_settings.Designer.cs">
+      <DependentUpon>attendance_settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\take_attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\take_attendance.Designer.cs">
+      <DependentUpon>take_attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\excel_load.cs" />
+    <Compile Include="Basic\form_method.cs" />
+    <Compile Include="Basic\image_processing.cs" />
+    <Compile Include="Basic\information_load.cs" />
+    <Compile Include="Basic\time.cs" />
+    <Compile Include="Basic\validation.cs" />
+    <Compile Include="Database\DBConnect.cs" />
+    <Compile Include="Database\dbSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\dbSettings.Designer.cs">
+      <DependentUpon>dbSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="developer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="developer.Designer.cs">
+      <DependentUpon>developer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\all_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\all_info.Designer.cs">
+      <DependentUpon>all_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\dept_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\dept_info.Designer.cs">
+      <DependentUpon>dept_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\faculty_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\faculty_info.Designer.cs">
+      <DependentUpon>faculty_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\qouta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\qouta.Designer.cs">
+      <DependentUpon>qouta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\Hall_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\Hall_info.Designer.cs">
+      <DependentUpon>Hall_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="info.cs" />
+    <Compile Include="mainui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainui.Designer.cs">
+      <DependentUpon>mainui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIMain.Designer.cs">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remark\remark_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remark\remark_info.Designer.cs">
+      <DependentUpon>remark_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\hallReportWithSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\hallReportWithSearch.Designer.cs">
+      <DependentUpon>hallReportWithSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PDFFooter.cs" />
+    <Compile Include="Report\PDFWriterEvents.cs" />
+    <Compile Include="Report\single_student_reportpdf.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings\basic_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\basic_settings.Designer.cs">
+      <DependentUpon>basic_settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\imageLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\imageLocation.Designer.cs">
+      <DependentUpon>imageLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\room_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\room_info.Designer.cs">
+      <DependentUpon>room_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Special\coupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Special\coupon.Designer.cs">
+      <DependentUpon>coupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Special\couponpdf.cs" />
+    <Compile Include="Student\image_upload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\image_upload.Designer.cs">
+      <DependentUpon>image_upload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\room.Designer.cs">
+      <DependentUpon>room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\search.cs" />
+    <Compile Include="Student\search_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\search_student.Designer.cs">
+      <DependentUpon>search_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\single_student_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\single_student_report.Designer.cs">
+      <DependentUpon>single_student_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\student_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\student_info.Designer.cs">
+      <DependentUpon>student_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\addUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\addUserForm.Designer.cs">
+      <DependentUpon>addUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\all_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\all_user.Designer.cs">
+      <DependentUpon>all_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\deleteUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\deleteUserForm.Designer.cs">
+      <DependentUpon>deleteUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\updateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\updateUserForm.Designer.cs">
+      <DependentUpon>updateUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebCamera\webcamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebCamera\webcamera.Designer.cs">
+      <DependentUpon>webcamera.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\attendance_settings.resx">
+      <DependentUpon>attendance_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\take_attendance.resx">
+      <DependentUpon>take_attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\dbSettings.resx">
+      <DependentUpon>dbSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="developer.resx">
+      <DependentUpon>developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\all_info.resx">
+      <DependentUpon>all_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\dept_info.resx">
+      <DependentUpon>dept_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\faculty_info.resx">
+      <DependentUpon>faculty_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\qouta.resx">
+      <DependentUpon>qouta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\Hall_info.resx">
+      <DependentUpon>Hall_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainui.resx">
+      <DependentUpon>mainui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIMain.resx">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Remark\remark_info.resx">
+      <DependentUpon>remark_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\hallReportWithSearch.resx">
+      <DependentUpon>hallReportWithSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\basic_settings.resx">
+      <DependentUpon>basic_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\imageLocation.resx">
+      <DependentUpon>imageLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\room_info.resx">
+      <DependentUpon>room_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Special\coupon.resx">
+      <DependentUpon>coupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Special\Report1.rdlc" />
+    <EmbeddedResource Include="Student\image_upload.resx">
+      <DependentUpon>image_upload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\room.resx">
+      <DependentUpon>room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\search_student.resx">
+      <DependentUpon>search_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\single_student_report.resx">
+      <DependentUpon>single_student_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\student_info.resx">
+      <DependentUpon>student_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\addUserForm.resx">
+      <DependentUpon>addUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\all_user.resx">
+      <DependentUpon>all_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\deleteUserForm.resx">
+      <DependentUpon>deleteUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\updateUserForm.resx">
+      <DependentUpon>updateUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebCamera\webcamera.resx">
+      <DependentUpon>webcamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\license.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo\addnew.png" />
+    <Content Include="logo\appicon.png" />
+    <Content Include="logo\atten.png" />
+    <Content Include="logo\booking.png" />
+    <Content Include="logo\bookreport.PNG" />
+    <Content Include="logo\buses.png" />
+    <Content Include="logo\busreport.PNG" />
+    <Content Include="logo\calc.png" />
+    <Content Include="logo\cancel.png" />
+    <Content Include="logo\clear.PNG" />
+    <Content Include="logo\defaultpic.png" />
+    <Content Include="logo\delete.PNG" />
+    <Content Include="logo\empreport.png" />
+    <Content Include="logo\emps.png" />
+    <Content Include="logo\exit.png" />
+    <Content Include="logo\help.png" />
+    <Content Include="logo\Login.png" />
+    <Content Include="logo\next.png" />
+    <Content Include="logo\notepad.png" />
+    <Content Include="logo\ok.png" />
+    <Content Include="logo\pass.png" />
+    <Content Include="logo\payments.png" />
+    <Content Include="logo\print.PNG" />
+    <Content Include="logo\refresh.png" />
+    <Content Include="logo\routes.PNG" />
+    <Content Include="logo\save.PNG" />
+    <Content Include="logo\schd.png" />
+    <Content Include="logo\schedreport.PNG" />
+    <Content Include="logo\schedule.png" />
+    <Content Include="logo\search.png" />
+    <Content Include="logo\splash.jpg" />
+    <Content Include="logo\update.png" />
+    <Content Include="logo\users.png" />
+    <Content Include="logo\viewschd.png" />
+    <Content Include="Picture\1.jpg" />
+    <Content Include="Picture\2.jpg" />
+    <None Include="Resources\JU-logo.png" />
+    <None Include="Resources\readme_en.txt" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\Icon003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

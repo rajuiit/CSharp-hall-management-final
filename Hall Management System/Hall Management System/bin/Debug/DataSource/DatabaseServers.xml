@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataBaseServers>
+  <DataBaseServer id="1" title="reza" address="localhost" />
+  <DataBases>
+    <Database id="1" name="hallmanagement" userid="root" password="" />
+  </DataBases>
+</DataBaseServers>

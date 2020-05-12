@@ -1,0 +1,10 @@
+C:\Users\Proshanti\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\bin\Debug\CustomAction.dll
+C:\Users\Proshanti\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\bin\Debug\CustomAction.pdb
+C:\Users\Proshanti\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Proshanti\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\obj\Debug\CustomAction.dll
+C:\Users\Proshanti\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\obj\Debug\CustomAction.pdb
+C:\Users\Mahfujur\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\bin\Debug\CustomAction.dll
+C:\Users\Mahfujur\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\bin\Debug\CustomAction.pdb
+C:\Users\Mahfujur\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\obj\Debug\CustomAction.dll
+C:\Users\Mahfujur\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\obj\Debug\CustomAction.pdb
+C:\Users\Mahfujur\Documents\Visual Studio 2010\Projects\Hall Management Setup\CustomAction\obj\Debug\CustomAction.csprojResolveAssemblyReference.cache
